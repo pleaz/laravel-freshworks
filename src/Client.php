@@ -33,7 +33,7 @@ class Client extends \GuzzleHttp\Client
      * @param  array  $options
      * @return \CodeGreenCreative\Freshworks\Client
      */
-    public function go(string $method, $uri = '', array $options = []): Object
+    public function go(string $method, $uri = '', array $options = []) // : Object // not working with FE delete
     {
         try {
             $this->response = parent::request($method, $uri, $options);
