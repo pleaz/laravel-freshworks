@@ -48,7 +48,7 @@ class Client extends \GuzzleHttp\Client
      * Return the JSON response as an object
      * @return Object
      */
-    public function toObject(): Object
+    public function toObject() // : Object // not working with FE delete
     {
         return json_decode($this->response->getBody());
     }
