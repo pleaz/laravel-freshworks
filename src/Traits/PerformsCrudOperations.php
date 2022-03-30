@@ -19,7 +19,7 @@ trait PerformsCrudOperations
         return $this->go('PUT', "{$this->resource}/{$id}", ['body' => json_encode($payload)]);
     }
 
-    public function destroy(int $id): Object
+    public function destroy(int $id) // : Object // not working with FE delete
     {
         return $this->go('DELETE', "{$this->resource}/{$id}");
     }
